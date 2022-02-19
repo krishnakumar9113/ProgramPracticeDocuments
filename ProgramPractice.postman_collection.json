@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "6aa61c2a-afde-44bd-b6a0-4526548dd44a",
+		"name": "ProgramPractice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8086/processAccountOpening",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n       \"bsb\":\"123456\",\r\n       \"balance\":0.00,\r\n       \"opening_date\":\"1985/06/13\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/processAccountOpening",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"processAccountOpening"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/transactions/{identification}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n       \"txn_amt\":10.00,\r\n       \"txn_type\":\"CRDT\",\r\n       \"txn_date\":\"1985/06/13\",\r\n       \"txn_remarks\":\"Expenses\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/transactions/52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"transactions",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processAccountEndOfDayBalances",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/processAccountEndOfDayBalances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"processAccountEndOfDayBalances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8086/calculateMonthlyInterest/03/2022",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/calculateMonthlyInterest/03/2022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"calculateMonthlyInterest",
+						"03",
+						"2022"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
